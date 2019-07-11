@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hostloc一键签到</title>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<p>请确保已经登陆 Hostloc 账号<p><br>
+<script type="text/javascript" async src="//idm-su.baidu.com/su.js"></script>
+</body>
+<script>
+                var maxUserId = 20000;
+                var baseUrl = "https://www.hostloc.com/space-uid-";
+                for (var i = 1; i <= 20; i++) {
+                        var url = baseUrl + Math.ceil(Math.random()*maxUserId) + ".html";
+                        var content = '<iframe src="' + url + '">';
+                        $('body').append(content);
+                }
+        </script>
+</html>
